@@ -1,5 +1,6 @@
 import hashlib
 import os
+import subprocess
 import sys
 
 from jinja2 import Environment, FileSystemLoader
@@ -48,3 +49,7 @@ if not os.path.exists(build_path):
 
 with open('%s/PKGBUILD' % build_path, 'w') as handler:
     handler.write(pkgbuild)
+
+subprocess.run('makepkg --printsrcinfo > .SRCINFO',
+               shell=True, cwd=build_path)
+
