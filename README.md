@@ -8,6 +8,7 @@ Simple script to generate the AUR builds for the CloudStation Drive software by 
 
 ```
 python3 -m venv .venv
+.venv/bin/pip install -r requirements.txt
 .venv/bin/python3 build.py <version> <release_number>
 ```
 
