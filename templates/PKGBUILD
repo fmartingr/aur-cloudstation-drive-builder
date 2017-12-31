@@ -1,0 +1,33 @@
+# Maintainer: Felipe Martin <me@fmartingr.com>
+
+pkgname=cloudstation-drive
+pkgver="{{ version }}"
+pkgrel="{{ build_number }}"
+pkgdesc="{{ description }}"
+arch=('i686' 'x86_64')
+url="http://www.synology.com"
+license=('unknown')
+depends=('glibc' 'libsm' 'binutils' 'fontconfig')
+optdepends=('nautilus: For nautilus integration')
+conflicts=('cloudstation-beta', 'cloudstation-3.0')
+source=()
+md5sums=()
+
+source_i686=({{ source_i686 }})
+md5sums_i686=('{{ md5sum_i686 }}')
+
+source_x86_64=({{ source_x86_64}})
+md5sums_x86_64=('{{ md5sum_x86_64 }}')
+
+prepare() {
+	cd "$srcdir"
+	ar x synology-cloud-station-drive-{{ release_number }}*
+}
+
+# pkgver() {}
+
+# build() {}
+
+# check() {}
+
+# package() {}
