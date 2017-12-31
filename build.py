@@ -22,6 +22,7 @@ def md5sum(url):
 context = {
     'version': version,
     'build_number': build_number,
+    'description': 'Cloud Station Drive is an application designed to synchronize files between your Synology NAS and PCs via the Internet, ensuring that your data is always up-to-date and enabling you to easily access your files.',
 }
 build_path = 'builds/{version}-{build_number}'.format(**context)
 source_i686 = 'https://global.download.synology.com/download/Tools/CloudStationDrive/{version}-{build_number}/Ubuntu/Installer/i686/synology-cloud-station-drive-{build_number}.i686.deb'.format(**context)
